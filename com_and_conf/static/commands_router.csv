@@ -30,7 +30,7 @@ no ip telnet server,undo telnet server,no ip telnet server,Disable Telnet server
 ping ip-address,ping ip-address,ping ip-address,Send an echo request to an IP address
 command RIP cisco,command RIP huawei,command RIP cisco,
 router rip,rip enable,router rip,Enabling RIP
-network [network_address] [subnet_mask],network [network_address] [mask],network [network_address] [subnet_mask],Advertising networks
+network [network_address] [subnet_mask],network [network_address] [subnet_mask],network [network_address] [subnet_mask],Advertising networks
 no auto-summary,no auto-summary,no auto-summary,Modifying RIP behavior (Optional)
 passive-interface [interface name],passive-interface [interface name],passive-interface [interface name],Modifying RIP behavior (Optional)
 distance [administrative distance] [network_address],distance [administrative distance] [network_address],distance [administrative distance] [network_address],Modifying RIP behavior (Optional)
