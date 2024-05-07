@@ -1,0 +1,103 @@
+cisco,huawei,hp,description
+interface interface-mode,interface interface-type interface-number,interface interface-mode,Enter interface configuration mode
+ip address ip-address subnet-mask,ip address ip-address subnet-mask,ip address ip-address subnet-mask,Assign IP address and subnet mask
+no ip routing (on all interfaces),interface interface-type interface-number -> no routing,no ip routing,Disable IP routing on a specific interface
+show ip route,display ip routing-table,show ip route,Display the routing table
+show ip bgp summary,display bgp summary,show ip bgp summary,Display BGP routing summary
+ping ip-address,ping ip-address,ping ip-address,Send an echo request to an IP address
+traceroute ip-address,tracert ip-address,traceroute ip-address,Trace the route to a destination IP address
+copy running-config startup-config,copy running-config startup-config,copy running-config startup-config,Save the running configuration to the startup configuration
+show clock,display clock,show clock,Display the system clock
+enable,super,enable,Enter privileged mode
+configure terminal,system-view,configure terminal,Enter global configuration mode
+exit,quit,exit,Exit from configuration mode
+show version,display version,show version,Display system information
+show ip interface brief,display ip interface brief,show ip interface brief,Display brief information about IP interfaces
+show cdp neighbors,display lldp neighbor,show lldp neighbors,Display Layer 2 neighbor information (Huawei uses LLDP instead of CDP)
+show arp,display arp,show arp,Display ARP table
+clear ip arp,undo ip arp,clear arp,Flush ARP entries
+show running-config,display current-configuration,show running-config,Display the running configuration
+name name (under interface or VLAN config),description text,name name,Set interface or VLAN description
+no shutdown,undo shutdown,no shutdown,Enable an interface
+copy running-config tftp://server-ip filename,copy running-config tftp://server-ip filename (similar syntax),copy running-config tftp://server-ip filename,Save running configuration to TFTP server
+show ip access-list,display acl acl-number,show ip access-list,Display an Access Control List (ACL)
+access-list number permit protocol source source-wildcard destination destination-wildcard,acl number permit protocol source source-mask destination destination-mask (might differ for specific protocols),access-list number permit protocol source source-wildcard destination destination-wildcard,Create an ACL permit entry
+access-list number deny protocol source source-wildcard destination destination-wildcard,acl number deny protocol source source-mask destination destination-mask (might differ for specific protocols),access-list number deny protocol source source-wildcard destination destination-wildcard,Create an ACL deny entry
+ping ip-address source ip-address,ping ip-address source ip-address (similar syntax),ping ip-address source ip-address,Send an echo request from a specific source IP
+debug ip ping ip-address,debug ping ip-address,debug ip ping ip-address,Enable debugging for ping operation
+show ip telnet,display telnet server,show ip telnet,Display Telnet server configuration
+no ip telnet server,undo telnet server,no ip telnet server,Disable Telnet server
+ping ip-address,ping ip-address,ping ip-address,Send an echo request to an IP address
+command RIP cisco,command RIP huawei,command RIP cisco,
+router rip,rip enable,router rip,Enabling RIP
+network [network_address] [subnet_mask],network [network_address] [mask],network [network_address] [subnet_mask],Advertising networks
+no auto-summary,no auto-summary,no auto-summary,Modifying RIP behavior (Optional)
+passive-interface [interface name],passive-interface [interface name],passive-interface [interface name],Modifying RIP behavior (Optional)
+distance [administrative distance] [network_address],distance [administrative distance] [network_address],distance [administrative distance] [network_address],Modifying RIP behavior (Optional)
+show ip route rip,display ip route rip,show ip route rip,Verifying RIP configuration
+show ip rip database,display rip database,show ip rip database,Verifying RIP configuration
+route-map [route-map name] permit [sequence number],route-map [route-map name] permit [sequence number],route-map [route-map name] permit [sequence number],RIP filtering
+ip access-list [access-list name] permit [source address] [source mask],ip access-list [access-list name] permit [source address] [source mask],ip access-list [access-list name] permit [source address] [source mask],RIP filtering
+set route-map [route-map name] out interface [interface name],set route-map [route-map name] out interface [interface name],set route-map [route-map name] out interface [interface name],RIP filtering
+update-source [source address],update-source [source address],update-source [source address],Adjusting RIP updates
+timer [timer type] [value],timer [timer type] [value],timer [timer type] [value],Adjusting RIP updates
+ip domain-name [domain name],ip domain-name [domain name],ip domain-name [domain name],Optimizing RIP performance
+redistribute rip [redistribution protocol],redistribute rip [redistribution protocol],redistribute rip [redistribution protocol],Optimizing RIP performance
+load-balance,load-balance,load-balance,Advanced commands
+neighbor [RIP address] [port number],neighbor [RIP address] [port number],neighbor [RIP address] [port number],Advanced commands
+debug ip rip,debug ip rip,debug ip rip,Advanced commands
+ping [RIP address],ping [RIP address],ping [RIP address],Testing RIP
+traceroute [RIP address],traceroute [RIP address],traceroute [RIP address],Testing RIP
+router ospf [process-id],ospf [process-id],router ospf,
+network [network_address] [wildcard-mask] area [area-id],area [area-id],area [area-id] authentication [message-digest | plaintext | null],
+default-information originate [metric value],authentication-mode [message-digest | simple | null],default-information originate [always | metric [metric-value] | metric-type [type-value] | route-map [route-map-name] | route-policy [route-policy-name]],
+router-id [router-id],cost [cost],log-adjacency-changes,
+passive-interface [interface-id],default-cost [cost],ospf [interface] [area-id] [cost [cost] | hello-interval [interval] | dead-interval [interval] | hello-multiplier [multiplier] | retransmit-interval [interval] | priority [priority] | transit | passive | ipv4 unnumbered],
+auto-cost reference-bandwidth [value],network [network_address] [mask] [type [type-value]],router-id [router-id],
+router bgp [AS-number],network-type [broadcast | p2p | p2mp | p2mp-spt | p2mp-bidir],auto-cost reference-bandwidth [bandwidth],
+neighbor [neighbor-ip] remote-as [AS-number],opaque-lsa enable,router bgp,
+network [network_address] mask [mask],retransmit-interval [interval],peer [peer-ip] remote-as [AS-number],
+neighbor [neighbor-ip] next-hop-self,stub [no-summary | summary | default],peer [peer-ip] next-hop-self,
+neighbor [neighbor-ip] activate,timers lsa-arrival min-interval [interval] max-age [interval],peer [peer-ip] advertisement-interval [time],
+neighbor [neighbor-ip] advertisement-interval [time],timers spf delay [delay],peer [peer-ip] route-policy [policy-name] import,
+neighbor [neighbor-ip] route-map [route-map-name] in,timers spf hold [hold],peer [peer-ip] route-policy [policy-name] export,
+neighbor [neighbor-ip] route-map [route-map-name] out,timers spf maximum [maximum],peer [peer-ip] prefix-list [list-name] import,
+neighbor [neighbor-ip] prefix-list [prefix-list-name] in,timers spf schedule [interval],peer [peer-ip] prefix-list [list-name] export,
+neighbor [neighbor-ip] prefix-list [prefix-list-name] out,timers spf startup [startup],peer [peer-ip] distribute-list [access-list-number] import,
+neighbor [neighbor-ip] distribute-list [access-list-number] in/out,transmit-delay [delay],peer [peer-ip] distribute-list [access-list-number] export,
+maximum-paths [number],auto-cost reference-bandwidth [bandwidth],maximum-paths [number],
+maximum-paths ibgp [number],router-id [router-id],default-information originate,
+default-information originate,spf-backoff { initial-wait [interval] maximum-wait [interval] },log-neighbor-changes,
+bgp log-neighbor-changes,timer spf hold [hold],redistribute [source] [route-policy] [metric],
+redistribute [source] [route-map] [metric],timer spf maximum [maximum],mpls,
+mpls label protocol ldp,timer spf start [start],mpls ldp,
+mpls ip,timer spf-startup startup [startup],,
+,ttl-security enable,,
+,version { 3 | 2 },,
+,bgp [AS-number],,
+,peer [peer-ip] as-number [AS-number],,
+,peer [peer-ip] next-hop-self,,
+,peer [peer-ip] advertisement-interval [time],,
+,peer [peer-ip] import-route-policy [policy-name],,
+,peer [peer-ip] export-route-policy [policy-name],,
+,peer [peer-ip] import-route-filter [filter-name],,
+,peer [peer-ip] export-route-filter [filter-name],,
+,peer [peer-ip] import-route-filter [filter-name] route-filter [filter-id],,
+,peer [peer-ip] export-route-filter [filter-name] route-filter [filter-id],,
+,peer [peer-ip] distribute-list [access-list-number] [in/out],,
+,maximum-paths [number],,
+,ipv4-family unicast,,
+,default-route-advertise [route-policy-name],,
+,peer [peer-ip] connect-interface [interface-type interface-number],,
+,peer [peer-ip] connect-interface loopback [loopback-number],,
+,peer [peer-ip] connect-interface vlanif [vlanif-number],,
+,peer [peer-ip] peer-as enable,,
+,peer [peer-ip] enable,,
+,peer [peer-ip] ipv4-family unicast,,
+,default-route-advertise [route-policy-name],,
+,peer [peer-ip] ipv6-family unicast,,
+,default-route-advertise [route-policy-name],,
+,import-route policy [policy-name],,
+,export-route policy [policy-name],,
+,mpls,,
+,mpls ldp,,

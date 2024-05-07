@@ -1,0 +1,6 @@
+cisco,hp,huawei
+"router ospf 1, network [rNetadd1] [rSubadd1] area [avar] , interface eth0 ip address [rNetadd2] [rSubadd2] ospf 1 area 0","ospf  1, network [rNetadd1] [rSubadd1] area [avar] , interface eth0 ip address [rNetadd2] [rSubadd2]  ospf 1 area 0","undo ip ospf authentication-mode undo ip ospf authentication-type ip ospf 1 , network [rNetadd1] [rSubadd1]  area [avar] , interface eth0 ip address [rNetadd2] [rSubadd2] ospf 1 area 0"
+enable configure terminal router rip version [NUM] network[network_address] no auto-summary exit exit write memory,router rip version [NUM] network[network_address] network [networ-address-2] exit write memory,"rip undo rip split-horizon network[network_address] network[networ-address-2] quit save
+"
+"enable,configure terminal,hostname[HN] interface GigabitEthernet[GE],ip address [netadd1] [subadd1],no shutdown,exit","conf t,hostname [HN],interface GigabitEthernet [GE] ip address [netadd1] [subadd1],no shutdown,exit","sys,sysname [HN],interface GigabitEthernet [GE] ip address [netadd1] [subadd1],undo shutdown,quit
+"

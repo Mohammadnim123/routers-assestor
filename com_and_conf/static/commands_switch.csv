@@ -1,0 +1,56 @@
+cisco,huawei,hp,description
+show ip interface brief,display ip interface brief,show interface ip brief,Shows brief information about IP interfaces
+ping ip-address,ping ip-address,ping <ip-address>,Sends ICMP echo requests to test network connectivity
+telnet ip-address,telnet ip-address,telnet <ip-address>,Establishes a remote telnet session to a device
+ssh ip-address,ssh ip-address,ssh <ip-address>,Establishes a secure remote shell session to a device
+enable,enable,enable,Enters privileged EXEC mode for advanced configuration
+configure terminal,system-view,configure terminal,Enters global configuration mode
+interface interface-type,interface interface-type,interface <type> <number>,Enters interface configuration mode
+no shutdown,undo shutdown,no shutdown,Enables a shutdown interface
+ip address ip-address subnet-mask,ip address ip-address subnet-mask,ip address <ip-address> <mask>,Assigns an IP address and subnet mask to an interface
+exit,quit,exit,Exits the current configuration mode
+show running-config,display running-config,show running-config,Displays the current running configuration
+show startup-config,display startup-config,show startup-config,Displays the startup configuration
+copy running-config startup-config,system-view; copy running-config startup-config; quit;,copy running-config startup-config,Saves the running configuration to startup configuration
+vlan <vlan-id>,vlan <vlan-id>,vlan <vlan-id>,Creates a new VLAN
+name <vlan-name>,name <vlan-name>,name <vlan-name>,Assigns a name to a VLAN
+interface range <if-type> <start> <end>,interface range <if-type> <start> <end>,Enters configuration mode for a range of interfaces,
+switchport mode access,port switchport mode access,switchport mode access,Configures a port as an access port
+switchport mode trunk,port switchport mode trunk,switchport mode trunk,Configures a port as a trunk port
+show cdp neighbors,display cdp neighbors,show cdp neighbors,Displays information about neighboring devices using CDP
+show lldp neighbors,display lldp neighbors,show lldp neighbors,Displays information about neighboring devices using LLDP
+show arp,display arp,show arp,Displays the ARP table
+access-list <number> <permit/deny> <protocol> source-address destination-address,acl number <number> <permit/deny> source-address destination-address,ip access-list <number> <permit/deny> <protocol> source-address destination-address,(configure access control lists)
+aaa new-model <model-name>,security authentication local <username> password <password>,username <username> password <password>,(create a new AAA security model)
+priority-level <number> <cos>,qos priority <number>,priority <number>, (configure priority levels for traffic)
+class-map <map-name> match access-group <number>,traffic class <class-name> police rate <bandwidth>,qos queue <number> bandwidth <percentage>,(create a class map for QoS)
+ip route <network-address> <subnet-mask> <next-hop-address>,ip route-static <network-address> <subnet-mask> <next-hop-address>,ip route <network-address> <subnet-mask> <next-hop-address>,(static route configuration)
+router rip,routing-protocol rip,routing-protocols rip,(enable RIP routing protocol)
+copy running-config tftp://<server-ip>/<filename>,copy running-config ftp://<server-ip>/<filename>,copy running-config tftp://<server-ip>/<filename>,(backup running config to TFTP server)
+show vlan brief,display vlan brief,show vlan,(display brief information about VLANs)
+spanning-tree mode rapid-pvst+,spanning-tree mode rstp,spanning-tree mode rapid-pvst+,(enable rapid PVST+ for faster convergence)
+spanning-tree portfast default,spanning-tree portfast,interface <if-type> <number> bpduguard enable,(enable portfast mode by default on all ports)
+switchport access vlan <vlan-id>,port switchport mode access vlan <vlan-id>,interface <if-type> <number> switchport mode access vlan <vlan-id>,(assign a port to a specific VLAN)
+vlan trunk allowed vlan <vlan-id> <vlan-id>,interface range <if-type> <start> <end> trunk allowed vlan <vlan-id> <vlan-id>,interface range <if-type> <start> <end> switchport mode trunk vlan <vlan-id> <vlan-id>,(allow specific VLANs on a trunk port)
+debug ip arp,debug arp,debug ip arp,(debug ARP table updates)
+show interface status,display interface brief,show interface,(display detailed information about interfaces)
+monitor session source interface <if-type> <number> destination interface <if-type> <number>,port mirroring source interface <if-type> <number> destination interface <if-type> <number>,port mirror source interface <if-type> <number> destination interface <if-type> <number>,(mirror traffic from one port to another)
+(switch),(switch),(switch),(switch)
+show ip interface brief,display ip interface brief,show interface ip brief,Shows brief information about IP interfaces
+ping ip-address,ping ip-address,ping <ip-address>,Sends ICMP echo requests to test network connectivity
+telnet ip-address,telnet ip-address,telnet <ip-address>,Establishes a remote telnet session to a device
+ssh ip-address,ssh ip-address,ssh <ip-address>,Establishes a secure remote shell session to a device
+enable,enable,enable,Enters privileged EXEC mode for advanced configuration
+configure terminal,system-view,configure terminal,Enters global configuration mode
+interface interface-type,interface interface-type,interface <type> <number>,Enters interface configuration mode
+no shutdown,undo shutdown,no shutdown,Enables a shutdown interface
+ip address ip-address subnet-mask,ip address ip-address subnet-mask,ip address <ip-address> <mask>,Assigns an IP address and subnet mask to an interface
+exit,quit,exit,Exits the current configuration mode
+show running-config,display running-config,show running-config,Displays the current running configuration
+show startup-config,display startup-config,show startup-config,Displays the startup configuration
+copy running-config startup-config,system-view; copy running-config startup-config; quit;,copy running-config startup-config,Saves the running configuration to startup configuration
+vlan <vlan-id>,vlan <vlan-id>,vlan <vlan-id>,Creates a new VLAN
+name <vlan-name>,name <vlan-name>,name <vlan-name>,Assigns a name to a VLAN
+interface range <if-type> <start> <end>,interface range <if-type> <start> <end>,Enters configuration mode for a range of interfaces,
+switchport mode access,port switchport mode access,switchport mode access,Configures a port as an access port
+switchport mode trunk,port switchport mode trunk,switchport mode trunk,Configures a port as a trunk port
